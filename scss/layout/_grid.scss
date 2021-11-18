@@ -1,0 +1,319 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title{
+        display: flex;
+        align-items: center;
+    }
+
+    .notification-profile-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+
+        .svg-menu-container{
+            display: flex;
+            flex-direction: row;
+            svg{
+                align-self: center;
+            }
+        }        
+    }
+}
+
+
+
+
+.sidebar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+@media screen and(min-width: 768px) {
+
+    .grid-container{
+        display: grid;
+        header{
+            grid-area: head;
+        }
+        .sidebar-container{
+            grid-area: sidebar;
+        }
+        main{
+            grid-area: main;
+        }
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 80px 1fr;
+        grid-template-areas: 
+        "head head"
+        "sidebar main";
+    }
+
+    .sidebar-container{
+        height: 300px;
+        width: 50px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+
+    .main-container{
+        display: flex;
+        justify-content: center;
+
+        .dashboard-container{
+            display: flex;
+            flex-wrap: wrap;
+
+
+
+
+            .alert-message-container{
+                display: none;
+
+                .alert-message{
+                    display: flex;
+                    justify-content: space-between;
+                 }
+            }
+            
+
+
+
+            .title-button-container{
+                display: flex;
+                flex-direction: column;
+    
+                .traffic-button{
+                    display: flex;
+                    justify-content: center;
+                    gap: 0 2px;
+                }
+    
+                @media screen and (min-width: 768px) {
+                    &{
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+
+
+
+            .mobile-users-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            
+
+
+
+
+
+            
+            .social-stats-container{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .social-box{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: left;
+                }
+
+                .social-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    gap: 15px;
+                }
+                
+                @media screen and (min-width: 768px) {
+
+                    .social-wrapper{
+                        flex-direction: row;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap:10px;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+            .new-member-container{
+                display: flex;
+                flex-direction: column;
+            
+                .user-box{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+            
+                    @media screen and(min-width: 768px) {
+                        display: grid;
+                        img{
+                            grid-area: img;
+                        }
+                        .user-name{
+                            grid-area: userName;
+                            align-self: flex-end;
+                        }
+                        .registration-day{
+                            grid-area: registrationDay;
+                        }
+                        .user-mail{
+                            grid-area: userMail;
+                            align-self: flex-start;
+                        }
+                        grid-template-columns: 100px auto 100px;
+                        grid-template-rows: auto;
+                        grid-template-areas: 
+                        "img userName registrationDay"
+                        "img userMail registrationDay" ;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+                        
+            .recent-activity-container{
+                display: flex;
+                flex-direction: column;
+                .activity-box{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media screen and (min-width: 768px) {
+                        display: grid;
+                        img{
+                            grid-area: img;
+                        }
+                        .activity-content{
+                            grid-area: cont;
+                            justify-self: start;
+                            align-self: flex-end;
+                        }
+                        a{
+                            grid-area: arrow;
+                        }
+                        .times-ago-class{
+                            grid-area: time;
+                            justify-self: start;
+                            align-self: flex-start;
+                        }
+                        grid-template-columns: 100px auto 20px;
+                        grid-template-rows: auto;
+                        grid-template-areas: 
+                        "img cont arrow"
+                        "img time arrow";
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+            
+            .settings-container{
+                display: flex;
+                flex-direction: column;
+                
+                .settings-row{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                }
+
+                .save-cancel-container{
+                    display: flex;
+                    justify-content: center;
+                    gap: 0 20px;
+                }
+            }
+
+
+            @media screen and(min-width: 1024px) {
+                .full-width-member-setting-container{
+                    display: grid;
+                
+                    .new-member-container{
+                        grid-area: member;
+                    }
+                    .recent-activity-container{
+                        grid-area: activity;
+                    }
+                    .message-user-container{
+                        grid-area: message;
+                    }
+                    .settings-container{
+                        grid-area: setting;
+                    }
+                
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: 
+                    "member activity"
+                    "message setting";
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

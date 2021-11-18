@@ -1,0 +1,94 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+
+.main-container{
+    position: relative;
+    padding-bottom: 40px;
+    width: 100%;
+    justify-self: center;
+
+    .background-block{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: calc(100% - 110px);
+        height: 50px;
+        background-color: #f7f7f7;
+        border-bottom: 1px solid $grey-light;
+        border-left: 1px solid $grey-light;
+
+        @media screen and (min-width: 1104px) {
+             width: calc((100% - 110px) - ((100% - 1024px) / 2));
+        }
+    }
+
+    .dashboard-container{
+        width: 100%;
+        max-width: 1024px;
+
+        .dashboard-title{  
+            text-align: left;
+            padding: auto;
+            width: 110px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+            margin-left: 15px;
+        }
+
+        .alert-message-container{
+            width: 100%;
+
+            .alert-message{
+                margin: 15px;
+                border-radius: 5px;
+                background-color: $primary-blue;
+                
+                > :first-child{
+                    margin: 0;
+                    padding-left: 15px;
+                    line-height: 40px;
+                }
+                > :last-child{
+                    cursor: pointer;
+                    align-self: center;
+                    margin: 0;
+                    padding-right: 15px;
+                    transition: 300ms;
+    
+                    &:hover{
+                        transition: 300ms;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.selected{
+    background-color: $primary-green;
+    border-radius: 13px;
+}
+
+.full-width-member-setting-container{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,163 @@
+body{
+    font-family: "Open Sans";
+    color: black;
+}
+
+.header-container{
+    h1{
+        color: $white;
+        font-weight: 300;
+        font-size: 20px;
+    }
+    span{
+        color: $white;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .notification-profile-container{
+        color: $white;
+        font-size: 13px;
+    }
+
+    .svg-menu-container{
+        p{
+            text-align: center;
+        }
+    }
+}
+
+
+.dashboard-title{
+    font-weight: 700;
+}
+
+.alert-message{
+    color: $white;
+
+    >:first-child{
+        font-size: 12px;
+    }
+    >:last-child{
+        text-align: end;
+
+        &:hover{
+            color: rgb(255, 232, 188);
+        }
+    }
+}
+
+.selected{
+    color: $white;
+}
+
+
+.new-member-container{
+    h1{  
+        font-size: 20px;
+    }
+}
+
+.recent-activity-container{
+    a{
+        color: black;
+    }
+    h1{
+        font-size: 20px;
+    }
+}
+
+.activity-box{
+    p{
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            text-align: left;
+        }
+    }
+    span{
+        font-weight: bold;
+    }
+    @media screen and(min-width: 768px) {
+        .arrow{
+            color: rgb(230, 184, 33);
+        }
+    }
+}
+
+.message-user-container{
+    h1{
+        font-size: 20px;
+    }
+
+    input, textarea{
+        text-indent: 10px;
+
+        &::placeholder{
+            color: $grey-light;
+        }
+    }
+
+    input[type="submit"]{
+        color: $white;
+    }
+
+    .message-sent, .message-error{
+        h1{
+            color: $white;
+        }
+    }
+}
+
+.traffic-container{
+    h1{
+        font-size: 20px;
+    }
+
+    .traffic-button{
+        p{
+            text-align: center;
+
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+}
+
+.daily-traffic-container{
+    h1 {
+        font-size: 20px;
+    }
+}
+
+.mobile-users-container{
+    h1{
+        font-size: 20px;
+    }
+}
+
+.social-stats-container{
+    .social-title{
+        color: black;
+    }
+    h1{
+        font-size: 20px;
+        color: $primary-blue;
+    }
+    p{
+        font-size: 37px;
+    }
+}
+
+.settings-container{
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+    #timezone{
+        font-size: 17px;
+    }
+}

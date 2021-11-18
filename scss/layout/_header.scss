@@ -1,0 +1,67 @@
+.header-container{
+    z-index: 500;
+    height: 100%;
+    padding: 0 5px;
+    background: #7477bf;
+
+    .notification-profile-container{
+        
+        .svg-menu-container{
+            height: 40px;
+            cursor: pointer;
+
+            &:hover {
+                @media screen and (min-width:1024px) {
+                    .bell-svg{
+                        transition: 200ms;
+                        fill: $primary-green;
+                        transform: scale(1.1);
+                    }    
+                }
+            }
+
+            .bell-svg{
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+                fill: $white;
+                transition: 200ms;
+            }
+
+            p{
+                width: 20px;
+                height: 20px;
+                margin: 0;
+                background-color: $primary-green;
+                border-radius: 50px;
+                align-self: flex-start;
+            }
+        }
+    
+
+        hr{
+            width: 0;
+            height: 30px;
+            border: 0.5px solid rgba(255,255,255,0.2);
+        }
+
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 90px;
+        }
+    }
+
+    @media screen and(min-width: 340px) {
+        padding: 0 15px;
+    }
+    
+}
+
+@media screen and(min-width: 768px) {
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 300;
+    } 
+}

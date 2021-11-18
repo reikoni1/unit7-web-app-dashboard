@@ -1,0 +1,35 @@
+
+.sidebar-container{
+    min-height: 50px;
+    background-color: $sidebar-background-color;
+
+    svg{
+        fill: white;
+        height: 30px;
+        transition: 200ms;
+    }
+
+    a:hover{
+        svg{
+            transition: 200ms;
+            fill: $primary-green;
+            transform: scale(1.1);
+        }
+    }
+
+    .svg-active{
+        transition: 200ms;
+        fill: $primary-green;
+        transform: scale(1.1);
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 20px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        position: sticky;
+        top: 80px;
+        left: 0;
+        z-index: 300;
+    }
+}
